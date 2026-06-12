@@ -1,6 +1,7 @@
 import "./App.scss";
 import Navbar from "../components/navbar/Navbar";
 import AboutMe from "../components/aboutMe/AboutMe";
+import Skills from "../components/skills/Skills";
 import Projects from "../components/projectCard/Projects";
 import { Work } from "../components/workExperiences/Work";
 
@@ -75,6 +76,12 @@ function App() {
         <Element name="section2">
           <section id="About">
             <AboutMe />
+          </section>
+        </Element>
+
+        <Element name="skills">
+          <section id="Skills">
+            <Skills />
           </section>
         </Element>
 

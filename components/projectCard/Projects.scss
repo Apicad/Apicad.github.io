@@ -27,6 +27,12 @@
         object-fit: cover;
         object-position: top;
         transform: translateY(-30%);
+
+        &.project-screenshot {
+          height: 100%;
+          object-position: center;
+          transform: none;
+        }
       }
     }
   }

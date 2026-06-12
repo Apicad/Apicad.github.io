@@ -40,6 +40,11 @@ section {
   will-change: auto;
 }
 
+// Skills content is short - size to content instead of full viewport
+section#Skills {
+  min-height: auto;
+}
+
 // Make Canvas fill the introduction section
 section#introduction {
   display: flex;

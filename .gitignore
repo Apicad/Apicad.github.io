@@ -27,3 +27,6 @@ dist-ssr
 bundle-stats.html
 lighthouse-report.html
 .playwright-mcp/
+
+# Brainstorming sessions
+.superpowers/

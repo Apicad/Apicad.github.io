@@ -120,26 +120,35 @@ const Tab = ({ children, tab, handleSetSelected, image, selected, year }) => {
 //an array with information of the tab
 const TABS = [
   {
+    title: "GPO MarTech Intern",
+    image: `${import.meta.env.BASE_URL}icons/linkedin.png`,
+    description: [
+      "Built a Node.js monitoring dashboard that integrates a marketing platform through SOAP and REST APIs and persists health and status data to SQLite, used daily by leadership teams for real-time visibility.",
+      "Designed AI-driven automation prototypes that generate marketing-campaign configurations and responsive email HTML from plain-language briefs, using large language model APIs (Anthropic Claude) with structured tool-use and Zod schema validation.",
+      "Maintained 10 to 15 Stensul email modules on a biweekly cadence, setting up, reviewing, and pushing changes live with internal stakeholders.",
+      "Automated recurring weekly data export and backfill requests in Python, building repeatable processes that supported the data science and marketing teams.",
+      "Migrated 1,300+ image assets from disparate platforms into the central Adobe EDAM digital asset management system, improving consistency and retrieval.",
+      "Investigated and resolved edge cases in campaign template logic, proposing code-based fixes and documenting best practices with engineers and marketers.",
+    ],
+    year: "Feb 2026 - Present",
+  },
+  {
     title: "Program Assistant",
     image: `${import.meta.env.BASE_URL}icons/CamEdu.jpeg`,
     description: [
-      "Designed and taught engaging coding lessons using tools like Scratch, HTML/CSS, JavaScript, robotics, and IoT, adjusting difficulty based on grade level and student experience.",
-      "Planned interactive, hands-on projects (games, animations, simple websites, and robotics challenges) to help students connect abstract programming concepts to real-world applications.",
-      "Supported large groups of TK–8 students by creating clear routines, managing transitions, and building structured activities that kept students focused, safe, and engaged.",
-      "Differentiated instruction by offering step-by-step guidance, visual aids, and extra support or extensions so that both beginner and advanced students could make progress.",
-      "Collaborated with staff to coordinate daily schedules, align lessons with program goals, and troubleshoot classroom or technology issues in real time.",
-      "Contributed to program improvements by sharing feedback from students, suggesting new activities or tools, and helping refine lesson plans to better match student needs and interests.",
+      "Cleaned and maintained student data in Excel and Python, reconciling rosters and validating records to ensure accurate class placement.",
+      "Built tracking dashboards and internal tools (Google Sheets, Figma, Trello) to streamline day-to-day program operations.",
+      "Coordinated up to 4 concurrent programs and led teams of 5 to 10 using Agile boards in Trello.",
+      "Taught programming and robotics to students from TK through middle school, designing lesson plans and assessing progress.",
     ],
     year: "March 2024 - Aug 2025",
   },
   {
-    title: "Tutor Teacher",
+    title: "Student Tutor",
     image: `${import.meta.env.BASE_URL}icons/foothillCollege.jpeg`,
     description: [
-      "Tutored students in software design, programming, and core math concepts, supporting them through homework, labs, and project work.",
-      "Broke down difficult coding and algorithm topics into clear, step-by-step explanations that matched each student's skill level.",
-      "Guided students in building real projects such as iOS applications, helping them move from idea to working prototype while understanding the 'why' behind each step.",
-      "Strengthened skills in patience, time management, and one-on-one teaching strategies to keep students engaged, on track, and confident in their learning.",
+      "Tutored students one-on-one in programming (mainly Java and JavaScript) and mathematics.",
+      "Tailored each session to the learner's style to build problem-solving confidence.",
     ],
     year: "April 2022 - June 2022",
   },
@@ -147,11 +156,9 @@ const TABS = [
     title: "Dev/Mission",
     image: `${import.meta.env.BASE_URL}icons/DevMission.jpg`,
     description: [
-      "Tutored students in software design, programming, and math concepts, supporting them with homework, projects, and exam preparation.",
-      "Simplified difficult coding and algorithm topics into clear, step-by-step explanations that matched each student's learning pace and style.",
-      "Guided students in building practical projects such as iOS applications, helping them move from idea to implementation while understanding key programming principles.",
-      "Developed strong patience, time management, and effective teaching strategies to keep students engaged, build their confidence, and help them reach their academic goals.",
+      "Served as Teaching Assistant for a Google-engineer-led IoT course as a Software Pre-Apprentice, guiding about 20 students per class through hands-on Particle Photon and sensor projects.",
+      "Created quizzes, debugged code and circuits, and gave one-on-one coding help.",
     ],
-    year: "February 2021 - May 2021",
+    year: "February 2021 - Aug 2021",
   },
 ].map((n, idx) => ({ ...n, id: idx + 1 }));

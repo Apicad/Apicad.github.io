@@ -2,6 +2,7 @@ import "./ComponentBox.scss";
 import Spline from "@splinetool/react-spline";
 import { useCallback, useRef, memo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { isWebGLAvailable } from "../utils/webglSupport";
 
 const ComponentBox = memo(() => {
   const splineRef = useRef();
@@ -46,6 +47,8 @@ const ComponentBox = memo(() => {
 
   // Disable motion animation when in contact section on mobile
   const shouldAnimate = !isMobile || !isInContact;
+
+  if (!isWebGLAvailable()) return null;
 
   return (
     <motion.div

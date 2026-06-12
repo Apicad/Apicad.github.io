@@ -8,7 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "perf": "lighthouse https://apicad.github.io/portfolio-website/ --view --output html --output-path ./lighthouse-report.html",
+    "analyze": "vite build && open bundle-stats.html"
   },
   "dependencies": {
     "@hcaptcha/react-hcaptcha": "^1.17.1",
@@ -16,7 +18,7 @@
     "@react-three/fiber": "^9.3.0",
     "@splinetool/r3f-spline": "^1.0.2",
     "@splinetool/react-spline": "^4.1.0",
-    "@splinetool/runtime": "^1.12.6",
+    "@splinetool/runtime": "^1.12.97",
     "gh-pages": "^6.3.0",
     "gltfjsx": "^6.5.3",
     "motion": "^12.23.14",
@@ -36,6 +38,8 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "lighthouse": "^13.4.0",
+    "rollup-plugin-visualizer": "^7.0.1",
     "sass-embedded": "^1.92.1",
     "vite": "^7.1.2"
   }

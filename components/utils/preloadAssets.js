@@ -1,5 +1,10 @@
+import { isWebGLAvailable } from "./webglSupport";
+
 // Preload critical assets for better performance
 export const preloadSplineScenes = () => {
+  // No point downloading 3D scenes the browser can't render
+  if (!isWebGLAvailable()) return;
+
   const scenes = [
     "https://prod.spline.design/xI6bQZSWJDbXKxvS/scene.splinecode", // MiniHouse
     "https://prod.spline.design/5CQfMSoMpTvytXvJ/scene.splinecode", // ComponentBox

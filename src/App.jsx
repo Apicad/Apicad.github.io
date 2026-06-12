@@ -12,6 +12,7 @@ import HeroText from "../components/HeroText/HeroText";
 import LoadingScreen from "../components/LoadingScreen/LoadingScreen";
 import { useState, useCallback, useEffect, lazy, Suspense } from "react";
 import { preloadSplineScenes } from "../components/utils/preloadAssets";
+import FpsMeter from "../components/utils/FpsMeter";
 
 // Lazy load 3D components for better performance
 const MiniHouse = lazy(() => import("../components/3DComponents/MiniHouse"));
@@ -48,6 +49,7 @@ function App() {
 
   return (
     <div>
+      <FpsMeter />
       {isLoading && <LoadingScreen onLoadComplete={handleLoadComplete} />}
       <div style={{ opacity: isLoading ? 0 : 1, transition: "opacity 0.5s" }}>
         <Navbar />

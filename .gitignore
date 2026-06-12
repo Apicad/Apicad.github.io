@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Performance reports
+bundle-stats.html
+lighthouse-report.html
+.playwright-mcp/

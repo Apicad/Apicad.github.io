@@ -37,7 +37,6 @@ const SKILL_ROWS = [
       { glyph: "⌁", label: "Prompt Engineering" },
       { glyph: "⚙", label: "Structured Tool-Use / Function Calling" },
       { glyph: "𝍢", label: "AI-Assisted Data Analysis" },
-      { glyph: "✓", label: "Schema Validation (Zod)" },
     ],
   },
   {

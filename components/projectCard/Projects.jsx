@@ -40,12 +40,14 @@ const Projects = () => {
     {
       id: 1,
       title: "Job-Application Pipeline",
+      image: `${import.meta.env.BASE_URL}job-pipeline.jpg`,
       description:
         "A multi-stage automation pipeline in Python and the Claude API: discovers and scores job postings, drafts cover letters validated against a verified-claims file to prevent fabrication, syncs Gmail and Google Sheets, and fills application forms with human review before every submission. Used for 100+ real applications.",
     },
     {
       id: 2,
       title: "AI Voice Tutor",
+      image: `${import.meta.env.BASE_URL}ai-voice-tutor.jpg`,
       description:
         "A voice tutor web app for the Microsoft AI-901 exam. Claude teaches spoken lessons and adaptive quizzes grounded in course notes, with browser voice input, text-to-speech, and per-topic progress tracking. Built with React and Vite.",
       link: "https://github.com/Apicad/ai-voice-tutor",

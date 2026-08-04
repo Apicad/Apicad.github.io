@@ -37,27 +37,44 @@ const Projects = () => {
     },
     {
       id: 1,
-      title: "Basketball Scheduler",
+      title: "Job-Application Pipeline",
       description:
-        "A scheduling tool that organizes basketball games, teams, and time slots. It helps automate match rotations, track scores, and manage multiple courts or groups efficiently.",
+        "A multi-stage automation pipeline in Python and the Claude API: discovers and scores job postings, drafts cover letters validated against a verified-claims file to prevent fabrication, syncs Gmail and Google Sheets, and fills application forms with human review before every submission. Used for 100+ real applications.",
     },
     {
       id: 2,
-      title: "Phaser.JS Game",
+      title: "AI Voice Tutor",
       description:
-        "An interactive web-based game built with the Phaser.js framework. It uses JavaScript to create animations, scenes, and logic for player interaction, focusing on fun gameplay and smooth graphics.",
+        "A voice tutor web app for the Microsoft AI-901 exam. Claude teaches spoken lessons and adaptive quizzes grounded in course notes, with browser voice input, text-to-speech, and per-topic progress tracking. Built with React and Vite.",
+      link: "https://github.com/Apicad/ai-voice-tutor",
     },
     {
       id: 3,
-      title: "Ticket Tracker",
+      title: "FlashDesk",
       description:
-        "A lightweight system to log, assign, and monitor tasks or issues. It helps manage workflow by tracking ticket status, priority, and resolution history, improving organization and accountability.",
+        "A zero-dependency spaced-repetition flashcard app in Node.js: vanilla JS front end, JSON file persistence, an interval-ladder scheduler, quiz mode, and a seedable sample deck.",
+      link: "https://github.com/Apicad/flashdesk",
     },
     {
       id: 4,
-      title: "AI agent",
+      title: "Basketball Scheduler",
       description:
-        "An AI tool that analyzes basketball statistics to uncover trends and generate performance insights. It can process player and team data to highlight strengths, predict outcomes, and support smarter game decisions.",
+        "A scheduling tool that organizes basketball games, teams, and time slots. It helps automate match rotations, track scores, and manage multiple courts or groups efficiently.",
+      link: "https://github.com/Apicad/basketball-scheduler",
+    },
+    {
+      id: 5,
+      title: "Phaser.JS Game",
+      description:
+        "An interactive web-based game built with the Phaser.js framework. It uses JavaScript to create animations, scenes, and logic for player interaction, focusing on fun gameplay and smooth graphics.",
+      link: "https://github.com/Apicad/Phaser-Pixel-Game",
+    },
+    {
+      id: 6,
+      title: "Ticket Tracker",
+      description:
+        "A lightweight system to log, assign, and monitor tasks or issues. It helps manage workflow by tracking ticket status, priority, and resolution history, improving organization and accountability.",
+      link: "https://github.com/Apicad/ticket-finder",
     },
   ];
   return (

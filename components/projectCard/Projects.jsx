@@ -56,6 +56,7 @@ const Projects = () => {
     {
       id: 3,
       title: "FlashDesk",
+      image: `${import.meta.env.BASE_URL}flashdesk.jpg`,
       description:
         "A zero-dependency spaced-repetition flashcard app in Node.js: vanilla JS front end, JSON file persistence, an interval-ladder scheduler, quiz mode, and a seedable sample deck.",
       link: "https://github.com/Apicad/flashdesk",

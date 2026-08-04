@@ -1,8 +1,9 @@
 import "./Projects.scss";
 
 import { motion } from "framer-motion";
+import TutorVoiceButton from "./TutorVoice";
 
-const Card = ({ title, description, image, link }) => {
+const Card = ({ title, description, image, link, voiceDemo }) => {
   const CardTag = link ? motion.a : motion.div;
   return (
     <CardTag
@@ -20,6 +21,7 @@ const Card = ({ title, description, image, link }) => {
       <div>
         <h2 className="title-of-card">{title}</h2>
         <p>{description}</p>
+        {voiceDemo && <TutorVoiceButton />}
       </div>
     </CardTag>
   );
@@ -47,6 +49,7 @@ const Projects = () => {
       description:
         "A voice tutor web app for the Microsoft AI-901 exam. Claude teaches spoken lessons and adaptive quizzes grounded in course notes, with browser voice input, text-to-speech, and per-topic progress tracking. Built with React and Vite.",
       link: "https://github.com/Apicad/ai-voice-tutor",
+      voiceDemo: true,
     },
     {
       id: 3,
@@ -104,6 +107,7 @@ const Projects = () => {
             description={e.description}
             image={e.image}
             link={e.link}
+            voiceDemo={e.voiceDemo}
           />
         ))}
       </motion.div>

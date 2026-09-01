@@ -18,6 +18,24 @@ const LinkedInIcon = () => (
   </svg>
 );
 
+const ResumeIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+    <path
+      d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M14 3v5h5M9 13h6M9 17h6"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 const MailIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
     <rect
@@ -61,6 +79,15 @@ const Footer = () => {
         >
           <LinkedInIcon />
           LinkedIn
+        </a>
+        <a
+          className="footer-link"
+          href={`${import.meta.env.BASE_URL}Abdiel-Picado-Resume.pdf`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <ResumeIcon />
+          Resume
         </a>
         <a className="footer-link" href="mailto:abdielpicadojobs@gmail.com">
           <MailIcon />

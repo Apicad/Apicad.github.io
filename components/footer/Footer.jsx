@@ -60,8 +60,10 @@ const MailIcon = () => (
 const Footer = () => {
   return (
     <footer className="site-footer">
-      <p className="footer-heading">Find me online</p>
-      <div className="footer-links">
+      <div className="footer-inner">
+        <p className="footer-eyebrow">Find me online</p>
+        <h2 className="footer-heading">Let&apos;s build something.</h2>
+        <div className="footer-links">
         <a
           className="footer-link github"
           href="https://github.com/Apicad"
@@ -93,10 +95,11 @@ const Footer = () => {
           <MailIcon />
           abdielpicadojobs@gmail.com
         </a>
+        </div>
+        <p className="footer-copy">
+          © 2026 Abdiel Picado · Built with React, Vite & Three.js
+        </p>
       </div>
-      <p className="footer-copy">
-        © 2026 Abdiel Picado · Built with React, Vite & Three.js
-      </p>
     </footer>
   );
 };

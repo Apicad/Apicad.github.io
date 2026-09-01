@@ -129,7 +129,6 @@ const HeroText = () => {
                   strings: [
                     "Software & AI Engineer",
                     "Fullstack Developer",
-                    "MarTech Intern @ LinkedIn",
                     "Curious Learner",
                   ],
                   autoStart: true,

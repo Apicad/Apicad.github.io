@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { Logo3D } from "../LoadingScreen/Logo3D";
 import { Canvas } from "@react-three/fiber";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const HeroText = () => {
@@ -11,7 +12,7 @@ const HeroText = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const text = "Portfolio Website!";
+  const text = "AI tools that do real work.";
 
   const getLetterAnimation = (index) => {
     if (hoveredIndex === null) return { y: 0 };
@@ -99,7 +100,7 @@ const HeroText = () => {
 
         <div className="hero-subtitle welcome-text">
           <div className="subtitle-line">
-            Welcome to my{" "}
+            I build{" "}
             <span
               className="portfolio-website-text"
               style={{
@@ -126,9 +127,9 @@ const HeroText = () => {
               <Typewriter
                 options={{
                   strings: [
-                    "Software Engineer",
+                    "Software & AI Engineer",
                     "Fullstack Developer",
-                    "Data Analyst",
+                    "MarTech Intern @ LinkedIn",
                     "Curious Learner",
                   ],
                   autoStart: true,

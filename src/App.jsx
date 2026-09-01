@@ -5,7 +5,7 @@ import Skills from "../components/skills/Skills";
 import Projects from "../components/projectCard/Projects";
 import { Work } from "../components/workExperiences/Work";
 
-import Contact from "../components/contact/Contact";
+import Footer from "../components/footer/Footer";
 
 import { Element } from "react-scroll";
 
@@ -97,11 +97,7 @@ function App() {
           </section>
         </Element>
 
-        <Element name="section5">
-          <section id="Contact">
-            <Contact />
-          </section>
-        </Element>
+        <Footer />
       </div>
     </div>
   );

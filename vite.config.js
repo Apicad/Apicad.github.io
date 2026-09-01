@@ -10,7 +10,8 @@ export default defineConfig({
     visualizer({ filename: "bundle-stats.html", gzipSize: true }),
   ],
   assetsInclude: ["**/*.glb"],
-  base: "/portfolio-website/",
+  // Repo will be renamed to apicad.github.io so the site lives at the root URL
+  base: "/",
   build: {
     rollupOptions: {
       output: {

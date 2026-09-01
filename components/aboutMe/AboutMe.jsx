@@ -1,31 +1,9 @@
 import "./AboutMe.scss";
-import Buttons from "../buttons/Buttons";
 
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const Overview = () => {
-  const baseUrl = import.meta.env.BASE_URL;
-  const buttonInformation = [
-    {
-      id: 1,
-      title: "Github",
-      img: `${baseUrl}icons/github.png`,
-      link: "https://github.com/Apicad",
-    },
-    {
-      id: 2,
-      title: "Linkedin",
-      img: `${baseUrl}icons/linkedin.png`,
-      link: "https://www.linkedin.com/in/abdiel-picado/",
-    },
-    {
-      id: 3,
-      title: "Resume",
-      img: `${baseUrl}icons/resume.png`,
-      link: `${baseUrl}Abdiel-Picado-Resume.pdf`,
-    },
-  ];
   return (
     <div className="Overview-container">
       <div className="profile-container">
@@ -44,7 +22,6 @@ const Overview = () => {
             />
           </div>
         </motion.div>
-        <Buttons items={buttonInformation} />
       </div>
       <motion.div
         initial={{ opacity: 0, x: 80 }}

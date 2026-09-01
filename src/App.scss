@@ -40,8 +40,9 @@ section {
   will-change: auto;
 }
 
-// Skills content is short - size to content instead of full viewport
-section#Skills {
+// Skills and Projects size to content instead of full viewport
+section#Skills,
+section#Projects {
   min-height: auto;
 }
 

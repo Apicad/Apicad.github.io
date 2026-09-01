@@ -130,7 +130,7 @@ const TABS = [
       "Migrated 1,300+ image assets from disparate platforms into the central Adobe EDAM digital asset management system, improving consistency and retrieval.",
       "Investigated and resolved edge cases in campaign template logic, proposing code-based fixes and documenting best practices with engineers and marketers.",
     ],
-    year: "Feb 2026 - Present",
+    year: "Feb 2026 - Aug 2026",
   },
   {
     title: "Program Assistant",

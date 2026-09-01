@@ -50,7 +50,7 @@ const Projects = () => {
     {
       id: 0,
       title: "Pixel Agents",
-      tags: ["Node.js", "WebSocket", "Claude API", "Canvas"],
+      tags: ["Node.js", "WebSocket", "Canvas"],
       description:
         "Turns Claude Code agents into pixel-art characters in a virtual office. Each agent walks to its desk and animates with what it is doing: typing while coding, reading while searching files. A real-time canvas for watching multi-agent activity.",
       image: `${import.meta.env.BASE_URL}pixel-agent.png`,
@@ -59,7 +59,7 @@ const Projects = () => {
     {
       id: 1,
       title: "Job-Application Pipeline",
-      tags: ["Python", "Claude API", "Gmail API", "Google Sheets"],
+      tags: ["Python", "Gmail API", "Google Sheets"],
       image: `${import.meta.env.BASE_URL}job-pipeline.jpg`,
       description:
         "A multi-stage automation pipeline that discovers and scores job postings, drafts cover letters checked against a verified-claims file so nothing is fabricated, syncs Gmail and Google Sheets, and pre-fills application forms with human review before every submission. Used for 100+ real applications.",
@@ -67,7 +67,7 @@ const Projects = () => {
     {
       id: 2,
       title: "AI Voice Tutor",
-      tags: ["React", "Vite", "Claude API", "Web Speech"],
+      tags: ["React", "Vite", "Claude API", "Google Cloud TTS", "Web Speech"],
       image: `${import.meta.env.BASE_URL}ai-voice-tutor.jpg`,
       description:
         "A voice-first study app for the Microsoft AI-901 exam. Claude teaches spoken lessons and adaptive quizzes grounded in course notes, with browser voice input, natural text-to-speech, and per-topic progress tracking.",

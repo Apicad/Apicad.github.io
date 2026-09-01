@@ -1,45 +1,132 @@
 .project-flex {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 26px;
   justify-content: center;
 
   .card-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: calc(50% - 10px);
-    max-width: 400px;
-    min-width: 280px;
-    text-align: center;
-    border-radius: 15px;
-    padding: 15px;
-    background-color: #162d57;
-    cursor: pointer;
+    width: calc(33.333% - 18px);
+    max-width: 380px;
+    min-width: 300px;
+    text-align: left;
+    border-radius: 16px;
+    background-color: #12274f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      border-color: rgba(79, 172, 254, 0.45);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+
+      .picture-of-card {
+        transform: scale(1.05);
+      }
+    }
 
     .picture-container {
       height: 200px;
       overflow: hidden;
-      border-radius: inherit;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
       .picture-of-card {
         width: 100%;
+        height: 100%;
         object-fit: cover;
-        object-position: top;
-        transform: translateY(-30%);
+        object-position: center;
+        display: block;
+        transition: transform 0.35s ease;
+      }
+    }
 
-        &.project-screenshot {
-          height: 100%;
-          object-position: center;
-          transform: none;
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 12px;
+      padding: 18px 20px 20px;
+
+      .title-of-card {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #eef3fc;
+      }
+
+      .tech-tags {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin: 0;
+        padding: 0;
+
+        li {
+          font-size: 11px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #8fc7ff;
+          padding: 3px 9px;
+          border-radius: 999px;
+          border: 1px solid rgba(79, 172, 254, 0.35);
+          background: rgba(79, 172, 254, 0.08);
+          white-space: nowrap;
+        }
+      }
+
+      p {
+        font-size: 14.5px;
+        line-height: 1.55;
+        color: #b9c6e4;
+      }
+
+      .card-actions {
+        margin-top: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        padding-top: 6px;
+
+        // TutorVoice ships an inline margin-top meant for the old layout
+        button {
+          margin-top: 0 !important;
+        }
+
+        .repo-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px 16px;
+          border-radius: 999px;
+          font-size: 13.5px;
+          font-weight: 600;
+          color: #0b1c40;
+          background: #4facfe;
+          transition: background 0.2s ease, transform 0.2s ease;
+
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+
+          &:hover {
+            background: #7fc4ff;
+            transform: translateY(-2px);
+          }
         }
       }
     }
   }
 }
 
-p {
-  font-size: 15px;
+@media (max-width: 1080px) {
+  .project-flex .card-container {
+    width: calc(50% - 13px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -50,29 +137,19 @@ p {
     .card-container {
       width: 100%;
       max-width: 100%;
-      gap: 15px;
-      padding: 15px;
+      min-width: 0;
 
       .picture-container {
-        height: 180px;
+        height: 190px;
       }
     }
   }
 }
 
-@media (max-width: 480px) {
-  .project-flex {
-    .card-container {
-      gap: 12px;
-      padding: 12px;
-
-      .picture-container {
-        height: 160px;
-      }
-    }
-  }
-
-  p {
-    font-size: 14px;
+@media (prefers-reduced-motion: reduce) {
+  .project-flex .card-container,
+  .project-flex .card-container .picture-of-card,
+  .project-flex .repo-link {
+    transition: none;
   }
 }

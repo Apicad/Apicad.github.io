@@ -1,125 +1,49 @@
-# 🌟 Portfolio Website
+# Portfolio Website
 
-A modern, interactive portfolio built with **React** and **3D experiences** to showcase my skills, work, and experience. Designed with a clean UI, smooth animations, and a fully responsive layout.
+Personal portfolio with an interactive 3D hero section, built with React and Three.js. Live at https://apicad.github.io/.
 
-![Status](https://img.shields.io/badge/Status-Live-success)
-![React](https://img.shields.io/badge/React-19.1.1-61DAFB?logo=react)
-![Vite](https://img.shields.io/badge/Vite-Latest-646CFF?logo=vite)
+## What it does
 
----
+One scrolling page that introduces me as a developer. It opens on a hero section with an animated 3D house model you can interact with, then moves through About, Skills (a game-style skill tree), Work Experience, and Projects, closing with a footer of contact links. A loading screen covers the initial 3D asset load so the page never appears half-ready.
 
-## ✨ Overview
+## Key features
 
-This portfolio highlights my frontend development skills through a polished interface and interactive 3D elements. It includes key sections like About, Work Experience, Projects, and Contact, with motion and 3D integrated throughout for a more engaging experience.
+- Interactive 3D house model, designed in Spline and rendered through react-three-fiber
+- Loading screen that preloads the Spline scenes before revealing the page
+- 3D components are lazy loaded behind Suspense, so the first paint does not wait for Three.js
+- Typewriter hero text and motion-based section transitions
+- Smooth scroll navigation between sections
+- Bundle-size and Lighthouse scripts (`npm run analyze`, `npm run perf`) for keeping performance in check
 
----
+## Tech stack
 
-## ✨ Features
+- React 19 with Vite 7
+- SCSS, one stylesheet per component
+- Three.js with @react-three/fiber and @react-three/drei
+- Spline runtime for the 3D scene
+- Motion (Framer Motion) for animations, react-scroll for navigation
+- Deployed to GitHub Pages with gh-pages
 
-* **Interactive 3D Elements** — 3D house model built in **Spline** and rendered with **Three.js**
-* **Fully Responsive** — Optimized for desktop, tablet, and mobile devices
-* **Smooth Animations** — Powered by **Framer Motion** for clean transitions
-* **Seamless Navigation** — Smooth scrolling and intuitive page structure
-* **Contact Form** — Integrated with **Web3Forms** for message handling
-* **Project Showcase** — Responsive project grid with hover interactions (in progress)
-* **Work Experience Section** — Interactive tabs displaying detailed roles
-* **Modern UI/UX** — Gradients, glassmorphism, and consistent styling
+## How it works
 
----
+`App.jsx` composes the page from self-contained section components, each living in its own folder under `components/` with its JSX and SCSS side by side. The heavy 3D pieces are split out of the main bundle and lazy loaded, while a loading screen preloads the Spline scenes and fades into the page once they are ready. The whole site stays static and deploys as plain files.
 
-## 🛠️ Tech Stack
+## Running it locally
 
-### Frontend
+```sh
+npm install
+npm run dev        # Vite dev server at http://localhost:5173
+```
 
-* **React 19.1.1**
-* **Vite**
-* **SCSS** (component-based structure, responsive mixins, variables)
+Other scripts:
 
-### 3D & Animation
+```sh
+npm run build      # production build into dist/
+npm run preview    # serve the production build locally
+npm run deploy     # publish dist/ to GitHub Pages
+npm run analyze    # build and open the bundle-size report
+```
 
-* **Three.js**
-* **@react-three/fiber**
-* **@react-three/drei**
-* **Spline Integration**
-* **Framer Motion**
+## What I learned / why I built it
 
-### Navigation & Routing
-
-* **React Scroll**
-* **React Router DOM**
-
----
-
-## 🧭 Website Sections
-
-1. **Introduction** — Hero section with an interactive 3D house model
-2. **About Me** — Bio, highlights, and profile content
-3. **Work Experience** — Tab-based layout for role details
-4. **Projects** — Responsive grid of project cards (in progress)
-5. **Contact** — Functional contact form
-
----
-
-## 📱 Responsive Design
-
-Breakpoints used across the site:
-
-* **Desktop:** ≥ 1024px
-* **Tablet:** 768px – 1023px
-* **Mobile:** 480px – 767px
-* **Small Mobile:** < 480px
-
-Mobile-first styling ensures a smooth experience across screen sizes.
-
----
-
-## 🎨 Styling Approach
-
-* Component-based SCSS structure
-* Reusable variables for consistent theming
-* Modern gradients + glassmorphism
-* Smooth transitions and micro-interactions
-
----
-
-## 🌐 Deployment
-
-Supports deployment to:
-
-* **Vercel** (recommended)
-* **Netlify**
-* **GitHub Pages**
-
-A production build is generated in the `dist/` directory.
-
----
-
-## 🎯 Highlights
-
-### 3D Interactive Experience
-
-* Spline 3D model integration
-* Smooth camera movement
-* Performance-focused rendering
-
-### Animation System
-
-* Scroll-triggered transitions
-* Fade/slide effects and hover interactions
-* Reusable motion components
-
-### Navigation
-
-* Smooth section scrolling
-* Clean layout and easy flow
-
----
-
-## 👤 Author
-
-**Abdiel Picado**
-
-* GitHub: [@Apicad](https://github.com/Apicad)
-* LinkedIn: [https://linkedin.com/in/abdiel-picado/](https://linkedin.com/in/abdiel-picado/)
-
----
+I built this to have one place that shows my work, and to push myself past a standard template portfolio. Most of what I learned came from performance problems I created for myself: putting a Spline scene on the first screen made the initial load heavy, and fixing that taught me about code splitting, lazy loading, and preloading assets behind a loading screen. It was also my first real project combining Spline models with react-three-fiber, and it taught me to organize SCSS so a growing site stays maintainable.

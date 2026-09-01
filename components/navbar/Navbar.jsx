@@ -81,17 +81,6 @@ const Navbar = () => {
               Projects
             </Link>
           </li>
-          <li className="menu-item">
-            <Link
-              to="section5"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              onClick={closeMenu}
-            >
-              Contact
-            </Link>
-          </li>
         </ul>
 
         <div className="nav-links">
@@ -128,16 +117,6 @@ const Navbar = () => {
               onClick={closeMenu}
             >
               Projects
-            </Link>
-          </ul>
-          <ul>
-            <Link
-              to="section5"
-              smooth={true}
-              duration={500}
-              onClick={closeMenu}
-            >
-              Contact
             </Link>
           </ul>
         </div>

@@ -4,7 +4,19 @@ import "./Projects.scss";
 import { motion } from "framer-motion";
 import TutorVoiceButton from "./TutorVoice";
 
-const Card = ({ title, description, image, link, tags, voiceDemo, index }) => {
+const LiveIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+    <path
+      d="M14 5h5v5M19 5l-8 8M19 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h4"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const Card = ({ title, description, image, link, linkLabel, tags, voiceDemo, index }) => {
   return (
     <motion.article
       className="card-container"
@@ -27,7 +39,13 @@ const Card = ({ title, description, image, link, tags, voiceDemo, index }) => {
         )}
         <p>{description}</p>
         <div className="card-actions">
-          {link && (
+          {link && linkLabel && (
+            <a className="repo-link" href={link} target="_blank" rel="noreferrer">
+              <LiveIcon />
+              {linkLabel}
+            </a>
+          )}
+          {link && !linkLabel && (
             <a className="repo-link" href={link} target="_blank" rel="noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
@@ -47,6 +65,16 @@ const Card = ({ title, description, image, link, tags, voiceDemo, index }) => {
 
 const Projects = () => {
   const cardInformation = [
+    {
+      id: 3,
+      title: "Pattern Learn",
+      tags: ["React", "Vite", "Algorithms"],
+      image: `${import.meta.env.BASE_URL}patternlearn.jpg`,
+      description:
+        "A live trainer for coding-interview patterns: hash maps, sliding window, two pointers, heaps, dynamic programming, and more. Each pattern comes with step-by-step visualizations, curated problem ladders with Big-O notes, and progress tracking.",
+      link: "https://patternlearn.com/#/",
+      linkLabel: "Try it live",
+    },
     {
       id: 0,
       title: "Pixel Agents",
@@ -96,6 +124,7 @@ const Projects = () => {
             description={e.description}
             image={e.image}
             link={e.link}
+            linkLabel={e.linkLabel}
             tags={e.tags}
             voiceDemo={e.voiceDemo}
             index={i}

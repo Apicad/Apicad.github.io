@@ -25,9 +25,11 @@ const Card = ({ title, description, image, link, linkLabel, tags, voiceDemo, ind
       viewport={{ amount: 0.3, once: true }}
       transition={{ duration: 0.5, delay: index * 0.12, ease: "easeOut" }}
     >
-      <div className="picture-container">
-        <img className="picture-of-card" src={image} alt={title} />
-      </div>
+      {image && (
+        <div className="picture-container">
+          <img className="picture-of-card" src={image} alt={title} />
+        </div>
+      )}
       <div className="card-body">
         <h3 className="title-of-card">{title}</h3>
         {tags && (
@@ -88,7 +90,9 @@ const Projects = () => {
       id: 1,
       title: "Job-Application Pipeline",
       tags: ["Python", "Gmail API", "Google Sheets"],
-      image: `${import.meta.env.BASE_URL}job-pipeline.jpg`,
+      // 2026-09-03: screenshot removed. The original showed real target companies,
+      // private fit scores and application statuses. Needs a redacted replacement.
+      image: null,
       description:
         "A multi-stage automation pipeline that discovers and scores job postings, drafts cover letters checked against a verified-claims file so nothing is fabricated, syncs Gmail and Google Sheets, and pre-fills application forms with human review before every submission. Used for 100+ real applications.",
     },

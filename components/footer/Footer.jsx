@@ -18,6 +18,7 @@ const LinkedInIcon = () => (
   </svg>
 );
 
+// Kept for when a redacted public resume replaces the one removed 2026-09-03.
 const ResumeIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
     <path
@@ -81,15 +82,6 @@ const Footer = () => {
         >
           <LinkedInIcon />
           LinkedIn
-        </a>
-        <a
-          className="footer-link"
-          href={`${import.meta.env.BASE_URL}Abdiel-Picado-Resume.pdf`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <ResumeIcon />
-          Resume
         </a>
         <a className="footer-link" href="mailto:abdielpicadojobs@gmail.com">
           <MailIcon />

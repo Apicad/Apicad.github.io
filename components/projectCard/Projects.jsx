@@ -106,6 +106,33 @@ const Projects = () => {
       link: "https://github.com/Apicad/ai-voice-tutor",
       voiceDemo: true,
     },
+    {
+      id: 4,
+      title: "Hospital Operations Dashboard",
+      tags: ["MySQL", "SQLite", "Python", "Power BI"],
+      image: `${import.meta.env.BASE_URL}hospital-dashboard.png`,
+      description:
+        "Year Up capstone. A 13-table hospital database in MySQL behind a Power BI dashboard of appointment volume, physician workload, and where patients come from. For the portfolio I added a seeded synthetic dataset, a MySQL-to-SQLite loader so anyone can run the queries without a server, and a notebook that rebuilds the three dashboard views.",
+      link: "https://github.com/Apicad/data-analytics-portfolio/tree/main/01-hospital-operations-dashboard",
+    },
+    {
+      id: 5,
+      title: "Salary Prediction",
+      tags: ["Python", "pandas", "statsmodels", "pytest"],
+      image: `${import.meta.env.BASE_URL}salary-prediction.png`,
+      description:
+        "Year Up capstone. Linear regression of salary on years of experience with pandas and statsmodels, R\u00b2 0.957 on a public Kaggle dataset. The portfolio version adds confidence and prediction intervals, residual diagnostics, leave-one-out cross-validation against a mean baseline, a pytest suite pinned to the original coefficients, and a CLI predictor.",
+      link: "https://github.com/Apicad/data-analytics-portfolio/tree/main/03-salary-prediction",
+    },
+    {
+      id: 6,
+      title: "Retail Sales Analysis",
+      tags: ["Excel", "Pivot Tables", "Data Storytelling"],
+      image: null,
+      description:
+        "Year Up capstone. Excel analysis of eight months of retail transactions by region, product category, and payment method, delivered as a pivot workbook, an executive memo, and a KPI deck with five recommendations. The repo write-up is in progress while I recover the original files.",
+      link: "https://github.com/Apicad/data-analytics-portfolio/tree/main/02-retail-sales-analysis",
+    },
   ];
   return (
     <div className="container ">
